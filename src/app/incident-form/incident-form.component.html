@@ -1,0 +1,60 @@
+<h2>Ajouter un incident</h2>
+<form [formGroup]="incidentForm" (ngSubmit)="submitForm()">
+  <div class="error" *ngIf="!incidentForm.valid && formSubmitted">
+    <ul>
+      <li *ngIf="this.incidentForm.controls['titre'].invalid">Le titre est obligatoire</li>
+      <li *ngIf="this.incidentForm.controls['email'].invalid">L'email est obligatoire</li>
+      <li *ngIf="this.incidentForm.controls['description'].invalid">La description est obligatoire</li>
+      <li *ngIf="this.incidentForm.controls['level'].invalid">Le level est obligatoire</li>
+      <li *ngIf="this.incidentForm.controls['type'].invalid">Le type est obligatoire</li>
+      <li *ngIf="this.incidentForm.controls['progress'].invalid">Le progress est obligatoire</li>
+      <li *ngIf="this.incidentForm.controls['open'].invalid">L'état est obligatoire</li>
+      <li *ngIf="this.incidentForm.controls['dateCreation'].invalid">La date est obligatoire</li>
+    </ul>
+  </div>
+  <div>
+    <label>ID</label>
+  </div>
+  <div>
+    <label for="titre">Titre</label>
+    <input type="text" id="titre" formControlName="titre">
+  </div>
+  <div>
+    <label for="email">Email</label>
+    <input type="email" id="email" formControlName="email">
+  </div>
+  <div>
+    <label for="description">Description</label>
+    <textarea id="description" formControlName="description"></textarea>
+  </div>
+  <div>
+    <label for="level">Level</label>
+    <select id="level" formControlName="level">
+      <option value="ERROR">ERROR</option>
+      <option value="FATAL">FATAL</option>
+      <option value="MEDIUM">MEDIUM</option>
+      <option value="MINOR">MINOR</option>
+    </select>
+  </div>
+  <div>
+    <label for="type">Type</label>
+    <select id="type" formControlName="type">
+      <option value="BUG">BUG</option>
+      <option value="FEATURE">FEATURE</option>
+    </select>
+  </div>
+  <div>
+    <label for="progress">Progress</label>
+    <input type="number" id="progress" formControlName="progress">
+  </div>
+  <div>
+    <label for="open">Open</label>
+    <input type="checkbox" id="open" formControlName="open">
+  </div>
+  <div>
+    <label for="dateCreation">Date Création</label>
+    <input type="date" id="dateCreation" formControlName="dateCreation">
+  </div>
+  <button type="submit">Envoyer</button>
+</form>
+

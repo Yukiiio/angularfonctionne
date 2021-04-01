@@ -1,0 +1,17 @@
+<div [class.level]="incident?.level">
+  <section>
+    <div><span>Titre:</span> {{incident?.titre}}</div>
+    <div><button [routerLink]="[incident?.id]">Plus d'infomations</button></div>
+  </section>
+  <section>
+    <div><span>Description </span>{{incident?.description}}</div>
+    <div><span>Email: </span>Le {{incident?.email}}  </div>
+    <div><span>Open</span> {{incident.open}}</div>
+  </section>
+  <section>
+    <div><span>Type </span>{{incident?.type}}</div>
+    <div><span>Date  </span>Le {{incident?.dateCreation | date:'dd/MM/yyyy'}} </div>
+  </section>
+</div>
+
+

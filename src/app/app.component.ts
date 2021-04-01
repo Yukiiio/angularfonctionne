@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {Incident} from './Interface/Incident';
+import {IncidentService} from './incident.service';
 
 @Component({
   selector: 'app-root',

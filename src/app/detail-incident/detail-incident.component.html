@@ -1,0 +1,22 @@
+<div class="container">
+  <div [ngClass]="{'fatal':incident.level === 'FATAL',
+                 'error':incident.level === 'ERROR',
+                 'medium':incident.level === 'MEDIUM',
+                 'minor':incident.level === 'MINOR',
+                 'closed':incident.progress === 100}">
+
+
+    <h1>{{incident.titre}} ({{incident.id}})</h1>
+    <p> {{incident.description}}</p>
+    <p>{{incident.level}}</p>
+    <p>{{incident.email}}</p>
+    <p> {{incident.description}}</p>
+    <p>{{incident.type}}</p>
+    <p>{{incident.dateCreation}}</p>
+    <p class="font-weight-bold">Progression</p>
+    <p><ngb-progressbar type="success" textType="white" [value]="[incident.progress]" [showValue]="true"></ngb-progressbar></p>
+  </div>
+  <button (click)="delete()">Supprimer</button>
+
+</div>
+<a [routerLink]="'/incidents'">Retour à la liste</a>

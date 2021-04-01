@@ -1,0 +1,48 @@
+strong {
+  color:red;
+}
+:host{
+  margin:10px 20px;
+  display:block;
+  border-left:6px solid #61bf60;
+}
+:host h4{
+  padding:0; margin:0;
+  padding-left:20px;
+  line-height:3em;
+  background-color: salmon;
+}
+:host > section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding:20px;
+  background-color: #d4ffd8;
+}
+
+div.late {
+  border-color:red;
+  background-color: #ffeafd;
+}
+div > section {
+  display:flex;
+  flex-direction: column;
+}
+div > section span {
+  font-weight:bold;
+}
+.fatal{
+  background-color: #FFB2B2;
+}
+.error{
+  background-color: #F5C6C6;
+}
+.medium{
+  background-color: #ffd3b2;
+}
+.minor{
+  background-color: #FFECB2;
+}
+.closed {
+  background-color: #FAFAFA;
+}

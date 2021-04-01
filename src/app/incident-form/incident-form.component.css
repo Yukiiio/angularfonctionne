@@ -1,0 +1,33 @@
+:host {
+  display:block;
+  border: 1px solid greenyellow;
+  margin:10px 20px; padding:20px;
+  background-color: lightyellow;
+}
+section {
+  display:flex;
+  flex-wrap: wrap;
+}
+section > div {
+  width:600px;
+  display:flex;
+}
+label {
+  display:block;
+  width:200px;
+}
+button {
+  border: 1px solid green;
+  background-color: lightgreen;
+  padding: 3px;
+  cursor:pointer;
+}
+.error{
+  border: 4px solid lightcoral;
+  background-color:salmon;
+  color: darkred;
+  padding: 10px;
+  margin-bottom:20px;
+}
+
+
